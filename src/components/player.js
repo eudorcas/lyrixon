@@ -22,7 +22,6 @@ class Player extends React.Component {
 
     return (
         <div className="app-player">
-            {console.log(this.props)}
             {this.ternaryFunction(this.props.run, this.props.loading)}
         </div>
    )

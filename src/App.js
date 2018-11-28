@@ -6,7 +6,6 @@ import Search from './components/search';
 import './App.css';
 import axios from "axios";
 const lyricsApiKey = "GjUb6pll8sKJLUwfpS9N8hH70pb11PNE2kXt0cVpUto0857oKpnVf6vMgy8fgqnQ";
-var Spotify = require('spotify-web-api-js');
 
 class App extends Component {
     constructor(props){
@@ -74,7 +73,6 @@ class App extends Component {
                 })
                 .then(res => res.json())
                 .then(data => {
-                        console.log(data);
                         if (!data.tracks.items[0].uri.length<1) {
                             this.setState({
                                 track: data.tracks.items[0].uri.substr(14),
